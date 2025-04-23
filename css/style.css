@@ -1,0 +1,137 @@
+body {
+    background-color: #383e67;
+    color: #ffe572;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    flex-flow: row;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1e3a;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+main {
+    padding: 20px;
+    max-height: fit-content;
+}
+
+.img {
+    height: auto;
+    width: 190px;
+}
+
+#buttonDiv {
+    align-self:center;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffe572;
+    border: #383e67 solid 4px;
+}
+button:hover {
+    background-color: #ac9a4c;
+    border-color: #5d67a7;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #383e67;
+    border-color: #ffe572;
+    color: #ffe572;
+}
+
+#cave {
+    width: 95vw;
+    height: 75vh;
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 95vw;
+    height: 75vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#search-area {
+    position: absolute;
+}
+
+#rocks {
+    width: 95vw;
+    height: 75vh;
+    z-index: 5;
+    position: absolute;
+    display: block;
+    pointer-events: none; 
+    overflow: hidden;
+    background-image: url("../imgs/smallrocks2.png");
+    background-repeat: repeat;
+}
+
+.gem {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width: 40px;
+    height: auto;
+}
+
+#gem1 {
+    filter: brightness(60%) saturate(100%) sepia(100%) hue-rotate(175deg) brightness(202%) contrast(100%);
+}
+
+#gem2 {
+    filter: sepia(100%) saturate(10000%) hue-rotate(1deg) brightness(90%) contrast(90%) saturate(5);
+}
+
+#gem3 {
+    fill:#7a03b6;
+    filter: brightness(90%) invert(19%) sepia(100%) saturate(6107%) hue-rotate(227deg) brightness(100%) contrast(100%)
+}
+
+#gem4 {
+    fill:#108d52;
+    filter: sepia(100%) saturate(10000%) hue-rotate(60deg) brightness(50%) contrast(90%);
+}
+
+#gem5 {
+    fill:#ffc02b;
+    filter: brightness(90%) invert(19%) sepia(100%) saturate(6207%) hue-rotate(358deg) brightness(108%) contrast(115%)
+}
+
+#gem6 {
+    fill:#ff8ae0;
+    filter: sepia(100%) saturate(10000%) hue-rotate(269deg) brightness(100%) contrast(170%);
+}
+
+#gem7 {
+    fill:#7ff7f5;
+    filter: sepia(100%) saturate(10000%) hue-rotate(90deg) brightness(100%) contrast(100%);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    #cave {
+        width: 100%;
+        height: auto;
+    }
+}
